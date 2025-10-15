@@ -6,6 +6,7 @@
 @layer base {
   html, body, #root { height: 100%; }
   body { @apply font-sans bg-white text-gray-800 antialiased; }
+  .dark body { @apply bg-[#0b0f1a] text-gray-200; } /* 다크일 때 */
   h1,h2,h3 { @apply tracking-tight; }
   a { @apply transition; }
   a:hover { @apply opacity-80; }
@@ -14,4 +15,15 @@
 /* Simple container helper */
 @layer utilities {
   .container-narrow { @apply max-w-3xl mx-auto px-4; }
+}
+
+/* Heading scale & text utils */
+@layer components {
+  .h1 { @apply text-4xl sm:text-5xl font-extrabold tracking-tight; }
+  .h2 { @apply text-2xl sm:text-3xl font-bold tracking-tight; }
+  .muted { @apply text-sm text-gray-500; }
+  .btn { @apply px-5 py-2 rounded-xl border transition; }
+  .btn-primary { @apply btn bg-dreamy-100 text-dreamy-800 hover:bg-dreamy-200; }
+  .btn-ghost { @apply btn hover:bg-gray-50; }
+  .card { @apply rounded-2xl border p-5 hover:shadow-sm transition; }
 }

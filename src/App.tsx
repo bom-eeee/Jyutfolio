@@ -2,11 +2,11 @@ import { Link, Outlet, useLocation } from 'react-router-dom'
 
 export default function App(){
   const { pathname } = useLocation()
-  const is = (p:string)=> pathname===p ? 'font-semibold text-gray-900' : 'text-gray-600'
+  const is = (p:string)=> pathname===p ? 'font-semibold text-gray-900 dark:text-white' : 'text-gray-600  dark:text-gray-400'
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className="border-b bg-white/70 backdrop-blur">
-        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
+    <div className="min-h-screen flex flex-col dark:bg-[#091a36]/80 dark:text-white">
+      <header className="border-b bg-white/70 backdrop-blur dark:bg-[#00183d]/80 dark:border-white/10">
+        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4 dark:text-white">
           <Link to="/" className="font-bold">Jyutfolio</Link>
           <nav className="ml-auto flex gap-4 text-sm">
             <Link to="/" className={is('/')}>About</Link>
