@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base typography */
+@layer base {
+  html, body, #root { height: 100%; }
+  body { @apply font-sans bg-white text-gray-800 antialiased; }
+  h1,h2,h3 { @apply tracking-tight; }
+  a { @apply transition; }
+  a:hover { @apply opacity-80; }
+}
+
+/* Simple container helper */
+@layer utilities {
+  .container-narrow { @apply max-w-3xl mx-auto px-4; }
+}
