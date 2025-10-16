@@ -3,12 +3,17 @@ import { useEffect, useState } from 'react'
 type Theme = 'light' | 'dark'
 
 function getInitialTheme(): Theme {
-  // 1) 저장된 값 우선
-  const saved = localStorage.getItem('theme')
-  if (saved === 'dark' || saved === 'light') return saved as Theme
-  // 2) 시스템 선호
-  const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches
-  return prefersDark ? 'dark' : 'light'
+  try {
+    // 1) 저장된 값 우선
+    const saved = localStorage.getItem('theme')
+    if (saved === 'dark' || saved === 'light') return saved as Theme
+    // 2) 시스템 선호
+    const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches
+    return prefersDark ? 'dark' : 'light'
+  } catch (e) {
+    // 안전하게 기본값 반환 (예: SSR 또는 접근 에러)
+    return 'light'
+  }
 }
 
 export default function ThemeToggle() {
@@ -18,7 +23,7 @@ export default function ThemeToggle() {
     const root = document.documentElement
     if (theme === 'dark') root.classList.add('dark')
     else root.classList.remove('dark')
-    localStorage.setItem('theme', theme)
+    try { localStorage.setItem('theme', theme) } catch {}
   }, [theme])
 
   return (

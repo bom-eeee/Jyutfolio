@@ -1,4 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom'
+import ThemeToggle from './components/ThemeToggle'
 
 export default function App(){
   const { pathname } = useLocation()
@@ -8,7 +9,8 @@ export default function App(){
       <header className="border-b bg-white/70 backdrop-blur dark:bg-[#00183d]/80 dark:border-white/10">
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4 dark:text-white">
           <Link to="/" className="font-bold">Jyutfolio</Link>
-          <nav className="ml-auto flex gap-4 text-sm">
+          <nav className="ml-auto flex items-center gap-4 text-sm">
+            <ThemeToggle />
             <Link to="/" className={is('/')}>About</Link>
             <Link to="/skills" className={is('/skills')}>Skills</Link>
             <Link to="/projects" className={is('/projects')}>Projects</Link>
