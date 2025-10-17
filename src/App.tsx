@@ -14,16 +14,18 @@ export default function App(){
 
   return (
     <div className="min-h-screen flex flex-col dark:bg-[#091a36]/80 dark:text-white">
-      <header className="border-b bg-white/70 backdrop-blur dark:bg-[#00183d]/80 dark:border-white/10">
-        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4 dark:text-white">
+      <header className="border-b bg-white/70 backdrop-blur dark:bg-[#0b0f1a]/70 dark:border-white/10">
+        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
           <Link to="/" className="font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded">Jyutfolio</Link>
-          <nav className="ml-auto flex items-center gap-4 text-sm">
-            <ThemeToggle />
-            <Link to="/" className={`$is('/') focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>About</Link>
-            <Link to="/skills" className={`$is('/skills') focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>Skills</Link>
-            <Link to="/projects" className={`$is('/projects') focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>Projects</Link>
-            <Link to="/contact" className={`$is('/contact') focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>Contact</Link>
-          </nav>
+          <div className="ml-auto flex items-center gap-3">
+            <nav className="ml-auto flex items-center gap-4 text-sm">
+              <ThemeToggle />
+              <Link to="/" className={`$is('/') focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>About</Link>
+              <Link to="/skills" className={`$is('/skills') focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>Skills</Link>
+              <Link to="/projects" className={`$is('/projects') focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>Projects</Link>
+              <Link to="/contact" className={`$is('/contact') focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>Contact</Link>
+            </nav>
+          </div>
         </div>
       </header>
 
