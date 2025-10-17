@@ -12,8 +12,8 @@ export default function About(){
           포트폴리오 · LLM 앱 · RPA · ERP · 게임 순차 개발/배포 중 . . .</i>
         </p>
         <p className="muted text-yellow-700 dark:text-violet-100">
-           언젠가는 천천히 . . .<br></br>
-           힝구리
+           꾸준한 작업 · 노력으로 탄생한 결과물 공유하기<br></br>
+           언젠간 빛을 발휘해 실무 효용 만들기
         </p>
         <div className="flex items-center justify-center gap-3">
           <Link to="/projects" className="px-5 py-2 rounded-xl border bg-yellow-100 text-yellow-800 dark:bg-violet-900/30 dark:text-white dark:border-white/10 dark:hover:shadow-none">
