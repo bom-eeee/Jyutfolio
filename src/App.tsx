@@ -20,10 +20,10 @@ export default function App(){
           <div className="ml-auto flex items-center gap-3">
             <nav className="ml-auto flex items-center gap-4 text-sm">
               <ThemeToggle />
-              <Link to="/" className={`$is('/') focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>About</Link>
-              <Link to="/skills" className={`$is('/skills') focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>Skills</Link>
-              <Link to="/projects" className={`$is('/projects') focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>Projects</Link>
-              <Link to="/contact" className={`$is('/contact') focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>Contact</Link>
+              <Link to="/" className={`${is('/') } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>About</Link>
+              <Link to="/skills" className={`${is('/skills') } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>Skills</Link>
+              <Link to="/projects" className={`${is('/projects') } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>Projects</Link>
+              <Link to="/contact" className={`${is('/contact') } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded`}>Contact</Link>
             </nav>
           </div>
         </div>
