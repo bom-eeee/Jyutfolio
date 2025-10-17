@@ -16,7 +16,7 @@ export default function Projects(){
       <h1 className="h2 text-yellow-600 dark:text-violet-200">Projects</h1>
       <div className="grid sm:grid-cols-2 gap-4">
         {items.map(x=>(
-          <div key={x.code} className="card">
+          <div key={x.code} className="group card block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dreamy-500 rounded-2xl">
           <div className="text-xs text-gray-500">{x.code}</div>
           <div className="flex items-center gap-2">
             <div className="text-lg font-semibold text-yellow-900">{x.title}</div>
