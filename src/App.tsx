@@ -13,8 +13,8 @@ export default function App(){
   const is = (p:string)=> pathname===p ? 'font-semibold text-gray-900 underline underline-offset-4 dark:text-white' : 'text-gray-600  dark:text-gray-400'
 
   return (
-    <div className="min-h-screen flex flex-col dark:bg-[#091a36]/80 dark:text-white">
-      <header className="border-b bg-white/70 backdrop-blur dark:bg-[#0b0f1a]/70 dark:border-white/10">
+    <div className="min-h-screen bg-yellow-50/20 flex flex-col dark:bg-violet-900/20 dark:text-white">
+      <header className="border-b bg-white/80 backdrop-blur dark:bg-violet-900/30 dark:border-white/10">
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
           <Link to="/" className="font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 rounded">Jyutfolio</Link>
           <div className="ml-auto flex items-center gap-3">

@@ -16,10 +16,10 @@ export default function About(){
            언젠간 빛을 발휘해 실무 효용 만들기
         </p>
         <div className="flex items-center justify-center gap-3">
-          <Link to="/projects" className="px-5 py-2 rounded-xl border bg-yellow-100 text-yellow-800 dark:bg-violet-900/30 dark:text-white dark:border-white/10 dark:hover:shadow-none">
+          <Link to="/projects" className="px-5 py-2 rounded-xl border bg-yellow-100/10 text-yellow-800 dark:bg-violet-900/10 dark:text-violet-200 dark:border-white/10 dark:hover:shadow-none">
             프로젝트
           </Link>
-          <Link to="/contact" className="px-5 py-2 rounded-xl border bg-yellow-100 text-yellow-800 dark:bg-violet-900/30 dark:text-white dark:border-white/10 dark:hover:shadow-none">
+          <Link to="/contact" className="px-5 py-2 rounded-xl border bg-yellow-100/10 text-yellow-800 dark:bg-violet-900/10 dark:text-violet-200 dark:border-white/10 dark:hover:shadow-none">
             연락하기
           </Link>
         </div>
