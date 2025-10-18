@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { container, item } from '../motions'
+// import { motion } from 'framer-motion'
+// import { container, item } from '../motions'
 
 export default function Contact(){
   return (
