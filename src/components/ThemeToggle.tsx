@@ -29,7 +29,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(t => (t === 'dark' ? 'light' : 'dark'))}
-      className="rounded-xl border px-3 py-1 text-sm"
+      className="rounded-xl border px-3 py-1 text-sm text-yellow-600 dark:text-violet-300"
       aria-label="Toggle dark mode"
       title="Toggle dark mode"
     >

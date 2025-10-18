@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { container, item } from '../motions'
 
 export default function Projects(){
   // Backlog, In-progress, Done
@@ -14,16 +16,25 @@ export default function Projects(){
   ]
 
   return (
-    <section className="container-narrow space-y-6">
-      <h1 className="h2 text-yellow-900 dark:text-violet-300">Projects</h1>
-      <div className="grid sm:grid-cols-2 gap-4">
+    <motion.section 
+      variants={container}
+      initial="hidden"
+      animate="show"
+      exit="hidden"
+      className="container-narrow space-y-6">
+        
+      <motion.h1 variants={item} className="h2 text-yellow-900 dark:text-violet-300">Projects</motion.h1>
+
+      {/* 프로젝트 카드 그리드 */}
+      <motion.div variants={item} className="grid sm:grid-cols-2 gap-4">
         {items.map(x=>{
           const link = x.link
           const isExternal = typeof link === 'string' && /^https?:\/\//.test(link)
           const isInternal = typeof link === 'string' && link.startsWith('/')
 
+          // 카드 내용
           const content = (
-            <div className="text-xs text-gray-500 dark:text-gray-400">{x.code}
+            <motion.div variants={item} className="text-xs text-gray-500 dark:text-gray-400">{x.code}
               <div className="flex items-center gap-2">
                 <div className="text-lg font-semibold text-yellow-600 dark:text-violet-200">{x.title}</div>
               </div>
@@ -35,7 +46,7 @@ export default function Projects(){
                 <span className="px-0 py-0.5 rounded-full bg-gaenari-100 text-gaenari-900 dark:bg-gaenari-300 dark:text-gaenari-900">Status: {x.status}</span>
                 <span className="px-2 py-0.5 rounded-full bg-gray-100 dark:bg-white/10">Next: {x.next}</span>
               </div>
-            </div>
+            </motion.div>
           )
 
           if (isExternal) {
@@ -61,7 +72,7 @@ export default function Projects(){
             </div>
           )
         })}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   )
 }

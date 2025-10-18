@@ -7,7 +7,7 @@ import App from './App'
 import About from './pages/About'
 import Skills from './pages/Skills'
 import Projects from './pages/Projects'
-import Contact from './pages/Contact'
+// import Contact from './pages/Contact'
 import ErrorPage from './pages/ErrorPage'
 import NotFound from './pages/NotFound'
 
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       { index: true, element: <About /> },
       { path: 'skills', element: <Skills /> },
       { path: 'projects', element: <Projects /> },
-      { path: 'contact', element: <Contact /> },
+      // { path: 'contact', element: <Contact /> },
       { path: '*', element: <NotFound /> }, // ← 404 캐치
     ],
   },
